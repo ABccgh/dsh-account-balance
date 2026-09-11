@@ -1,0 +1,30 @@
+# Ignore rules for the `dsh-account-balance` plugin package.
+#
+# This repository IS a package directory, not a harness home and not a preset
+# tree. Three patterns a session-rooted project would need are deliberately
+# ABSENT — `.dsh/`, `sessions/`, `storages/`, and `.credentials.yaml` /
+# `settings.yaml` — because they describe `$DSH_HOME`, which is a different
+# directory entirely, and nothing under this root ever produces them. Leaving
+# them in would suppress a real file of that name if one ever appeared here, and
+# would imply this tree holds state it does not.
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Secrets — kept because a stray key must never be committed, whatever the layout.
+# The plugin resolves its credential at runtime from the harness credential store,
+# so no secret belongs in this tree and this rule is a backstop, not a convenience.
+.env
+.env.*
+*.pem
+*.key

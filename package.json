@@ -1,0 +1,39 @@
+{
+  "name": "dsh-account-balance",
+  "version": "0.1.0",
+  "description": "DeepSeek account balance for the DSH Web GUI: an authenticated host route reading GET /user/balance, and a sidebar-footer badge that renders it.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "plugin",
+    "deepseek",
+    "balance"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web"
+    }
+  },
+  "author": "ABccgh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ABccgh/dsh-account-balance.git"
+  },
+  "homepage": "https://github.com/ABccgh/dsh-account-balance#readme",
+  "bugs": {
+    "url": "https://github.com/ABccgh/dsh-account-balance/issues"
+  },
+  "license": "MIT"
+}
